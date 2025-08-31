@@ -1,24 +1,32 @@
 :root{
-  --bg:#ffffff; --text:#0e1726; --muted:#5c6773; --brand:#0b3b5b; --brand-2:#2ea6ff; --surface:#f2f5f8;
+  --bg:#FFFFFF;
+  --text:#2B2E33;        /* grafite principal */
+  --muted:#6A6F78;       /* cinza secundário */
+  --brand:#2B2E33;       /* cor de marca (escura, como a placa) */
+  --brand-2:#25D366;     /* destaque WhatsApp */
+  --surface:#F0F2F5;     /* cards/áreas */
   --radius:16px; --space:clamp(16px,2vw,24px); --max:1200px;
-  --focus: 2px solid #2ea6ff;
+  --focus:2px solid #25D366;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
 img{max-width:100%;height:auto}
 a{color:var(--brand)} a:focus{outline:var(--focus);outline-offset:2px}
-.btn, .btn-outline{display:inline-block;padding:.75rem 1rem;border-radius:999px;text-decoration:none;font-weight:600}
+.btn,.btn-outline{display:inline-block;padding:.75rem 1rem;border-radius:999px;text-decoration:none;font-weight:700}
 .btn{background:var(--brand);color:#fff}
 .btn:hover{opacity:.9}
 .btn-outline{border:2px solid var(--brand);color:var(--brand);background:#fff}
+.btn-whatsapp{background:var(--brand-2);color:#fff}
 .site-header,.site-footer{max-width:var(--max);margin:auto;padding:var(--space);display:flex;align-items:center;gap:16px}
 .site-header{justify-content:space-between}
+.brand img{height:40px;width:auto}
 .nav a{margin-inline:.5rem;text-decoration:none}
 .hero{max-width:var(--max);margin:auto;padding:clamp(24px,6vw,80px) var(--space);display:grid;gap:16px}
-.hero .mark{background:linear-gradient(90deg,var(--brand-2),#7fd2ff);-webkit-background-clip:text;color:transparent}
 .features{max-width:var(--max);margin:auto;padding:var(--space);display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .features article{background:var(--surface);padding:16px;border-radius:var(--radius)}
 .site-footer{justify-content:center;border-top:1px solid #e5eaf0}
+.muted{color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){
   .btn,.btn-outline{transition:opacity .2s ease}
 }
