@@ -2,8 +2,8 @@
   --bg:#FFFFFF;
   --text:#2B2E33;        /* grafite principal */
   --muted:#6A6F78;       /* cinza secundário */
-  --brand:#2B2E33;       /* cor de marca (escura, como a placa) */
-  --brand-2:#25D366;     /* destaque WhatsApp */
+  --brand:#2B2E33;       /* botão/links principais (escuro) */
+  --brand-2:#25D366;     /* WhatsApp */
   --surface:#F0F2F5;     /* cards/áreas */
   --radius:16px; --space:clamp(16px,2vw,24px); --max:1200px;
   --focus:2px solid #25D366;
@@ -23,6 +23,7 @@ a{color:var(--brand)} a:focus{outline:var(--focus);outline-offset:2px}
 .brand img{height:40px;width:auto}
 .nav a{margin-inline:.5rem;text-decoration:none}
 .hero{max-width:var(--max);margin:auto;padding:clamp(24px,6vw,80px) var(--space);display:grid;gap:16px}
+.hero .mark{background:linear-gradient(90deg,#25D366,#8BF0B5);-webkit-background-clip:text;color:transparent}
 .features{max-width:var(--max);margin:auto;padding:var(--space);display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .features article{background:var(--surface);padding:16px;border-radius:var(--radius)}
 .site-footer{justify-content:center;border-top:1px solid #e5eaf0}
