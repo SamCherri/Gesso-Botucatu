@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orçamento — Botucatu Gesso</title>
+  <meta name="description" content="Solicite um orçamento de gesso e drywall.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="Logo" width="140" height="32"></a>
+    <nav class="nav">
+      <a href="servicos.html">Serviços</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="sobre.html">Sobre</a>
+      <a class="btn" aria-current="page" href="contato.html">Orçamento</a>
+    </nav>
+  </header>
+
+  <main class="hero" style="padding-top:24px">
+    <h1>Peça seu orçamento</h1>
+    <form id="form-orcamento" aria-describedby="form-help" style="display:grid;gap:12px;max-width:720px">
+      <label>Nome*<br><input name="nome" required></label>
+      <label>WhatsApp*<br><input name="whats" required inputmode="tel" pattern="^[0-9()+\-.\s]{8,}$"></label>
+      <label>Cidade/Bairro<br><input name="cidade"></label>
+      <label>Serviço desejado*<br>
+        <select name="servico" required>
+          <option value="">Selecione…</option>
+          <option>Forro</option><option>Divisória</option><option>Sanca</option><option>Painel 3D</option><option>Outro</option>
+        </select>
+      </label>
+      <label>Descrição do projeto<br><textarea name="descricao" rows="4"></textarea></label>
+
+      <!-- Honeypot -->
+      <input type="text" name="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+      <button class="btn" type="submit">Enviar</button>
+      <p id="form-help" class="muted">Campos com * são obrigatórios. Seus dados não serão compartilhados.</p>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="y"></span> Botucatu Gesso • <a href="privacidade.html">Privacidade</a> • <a href="termos.html">Termos</a></small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <!-- Fase 6: substituiremos por app-firebase.js que salva no Firestore -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
